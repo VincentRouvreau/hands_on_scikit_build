@@ -1,0 +1,11 @@
+name: scikitbuild
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - cmake
+  - gxx
+  - scikit-build-core
+  - pybind11
+  - cython
+  - tbb

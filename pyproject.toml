@@ -1,0 +1,13 @@
+[build-system]
+requires = ["scikit-build-core", "cython", "pybind11", ]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "skbgudhi"
+version = "0.0.0"
+description="GUDHI python module build with scikit-build"
+readme = "introduction.rst"
+license = "MIT"
+authors = [
+  { name = "The GUDHI Editorial Board", email = "gudhi-contact@inria.fr" },
+]
