@@ -8,4 +8,4 @@ dependencies:
   - scikit-build-core
   - pybind11
   - cython
-  - tbb
+  - tbb-devel

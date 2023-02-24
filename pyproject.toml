@@ -7,7 +7,22 @@ name = "skbgudhi"
 version = "0.0.0"
 description="GUDHI python module build with scikit-build"
 readme = "introduction.rst"
-license = "MIT"
 authors = [
   { name = "The GUDHI Editorial Board", email = "gudhi-contact@inria.fr" },
 ]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+
+[tool.scikit-build]
+cmake.build-type = "Release"
+build-dir = "bdist"
+
+[tool.scikit-build.cmake.define]
+# Put CMake defines in this table.
