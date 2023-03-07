@@ -1,13 +1,16 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(${SKBUILD_PROJECT_NAME} VERSION ${SKBUILD_PROJECT_VERSION})
+project(skbgudhi VERSION 0.0.0)
 
-# set(CMAKE_PREFIX_PATH "/home/gailuron/miniconda3/envs/scikitbuild")
-
-find_package(pybind11 CONFIG REQUIRED)
+# C++ requirements
 find_package(TBB REQUIRED)
+# Python modules requirements
+find_package(pybind11 CONFIG REQUIRED)
+find_package(PythonExtensions REQUIRED)
+find_package(Cython REQUIRED)
 
-pybind11_add_module(_pyb MODULE skbgudhi/pyb.cc)
-target_link_libraries(_pyb PRIVATE TBB::tbb)
+add_executable(bench_tbb bench_tbb.cpp)
+target_link_libraries(bench_tbb TBB::tbb)
+install(TARGETS bench_tbb LIBRARY DESTINATION skbgudhi)
 
-install(TARGETS _pyb DESTINATION skbgudhi)
+add_subdirectory(skbgudhi)

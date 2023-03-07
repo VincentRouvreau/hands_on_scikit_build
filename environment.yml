@@ -5,7 +5,7 @@ dependencies:
   - python=3.7
   - cmake
   - gxx
-  - scikit-build-core
+  - scikit-build
   - pybind11
   - cython
   - tbb-devel
