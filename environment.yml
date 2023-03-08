@@ -9,3 +9,5 @@ dependencies:
   - pybind11
   - cython
   - tbb-devel
+  - toml # for python -m build
+  - zipp # for python -m build
