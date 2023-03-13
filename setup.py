@@ -1,4 +1,7 @@
 from skbuild import setup
+
+# python -c "import skbuild;print(skbuild.constants.CMAKE_BUILD_DIR())"
+
 setup(
     name="skbgudhi",
     version="0.0.0",
