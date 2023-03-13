@@ -29,8 +29,9 @@ void bench_tbb()
       std::chrono::system_clock::now() - start_time
     ).count();
   // Stop
-
+#ifdef DEBUG_TRACES
   std::cout << " in " << time_ms << " ms" << std::endl;
+#endif  // DEBUG_TRACES
 
   // Start
   start_time = std::chrono::system_clock::now();
@@ -44,5 +45,7 @@ void bench_tbb()
     ).count();
   // Stop
 
+#ifdef DEBUG_TRACES
   std::cout << " in " << time_ms << " ms" << std::endl;
+#endif  // DEBUG_TRACES
 }

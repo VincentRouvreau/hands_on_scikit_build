@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.15)
 
 project(skbgudhi VERSION 0.0.0)
 
+add_definitions(-DDEBUG_TRACES)
+
 # C++ requirements
 find_package(TBB REQUIRED)
 # Python modules requirements
